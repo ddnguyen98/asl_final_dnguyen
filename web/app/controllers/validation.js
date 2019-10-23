@@ -5,13 +5,13 @@ const checks = {
     .isUUID().withMessage('Id not valid, please go back try again'),
   title: check('title')
     .isLength(1)
-    .exists().withMessage('title is required'),
+    .withMessage('Title is required'),
   text: check('text')
     .isLength(1)
-    .exists().withMessage('text is missing'),
+    .withMessage('Text is required'),
   location: check('location')
     .isLength(1)
-    .exists().withMessage('location is missing'),
+    .withMessage('Location is required'),
   type: check('type')
     .exists().withMessage('A type is required')
     .isIn(['public', 'private'])
