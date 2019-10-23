@@ -1,0 +1,17 @@
+extends ./_layout
+include ./_includes/link_mixin
+block content
+  h1.heading Profile
+
+  h2.heading Entrys
+  ul.list
+    for entry in entrys
+      li.list__item
+        span.list__item__title= entry.title
+        span.list__item__title= "Date: " +entry.date
+        span.list__item__title= "Location: "+entry.location
+        +link('/profile/delete/'+entry.id, 'Delete', 'fa-trash', 'linkSecondary')
+        +link('/profile/edit/'+entry.id, 'edit', 'fa-edit')
+      span.list__item__title= entry.text
+
+  a.button(href="profile/create") Add a new entrys

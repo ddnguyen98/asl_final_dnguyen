@@ -1,0 +1,9 @@
+{
+    "env": {
+      "DEBUG": "web:*",
+      "SECRET": "213213213qdadsd23131123zxzcxxz23",
+      "CLIENT_ID": "5ca10c06d6f99daa9ab5",
+      "CALLBACK_URL": "http://localhost:3000/github/callback"
+    },
+    "ignore": "sessions"
+}

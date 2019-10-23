@@ -1,0 +1,22 @@
+extends ../_layout
+block content
+  h1.heading= id ? 'Edit Entry' : 'New Entry'
+  form.form(method="POST")
+    label.form__label title
+      input.form__input(type="text", name="title", value=title)
+    label.form__label text
+      input.form__input(type="text", name="text" value=text)
+    label.form__label location
+      input.form__input(type="text", name="location" value=location)
+    label.form__label
+      span.form__labelInline Is this entry public?
+      label.form__labelInline
+        input.form__input__radio(type="radio", name="type", value="public", checked=type === 'public')
+        span yes
+      label.form__labelInline
+        input.form__input__radio(type="radio", name="type", value="private" checked=type === 'private')
+        span no
+    button.button(type="submit") Save
+    if errors
+      for error in errors
+        small.flash=error.msg

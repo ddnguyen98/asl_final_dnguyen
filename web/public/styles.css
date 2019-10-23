@@ -1,0 +1,257 @@
+@import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
+/**
+******** GLOBAL *********
+**/
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+:root {
+  --active-color: #2ab7ca;
+  --primary-color: #fe8a71;
+  --secondary-color: #fed766;
+  --white: #fdfdfd;
+  --gray-color: #f4f4f8;
+  --border-color: #e6e6ea;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+******** LAYOUT *********
+**/
+.body {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--white);
+  justify-content: space-between;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-grow: 5;
+}
+
+/**
+******** BRAND *********
+**/
+.heading {
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  color: var(--primary-color);
+}
+
+.headingSecondary {
+  margin: 10px 0;
+  color: var(--secondary-color);
+}
+
+.link,
+.link__delete {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 4px 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--active-color);
+  border: none;
+  border-bottom: 1px solid var(--active-color);
+  outline: none;
+  background: none;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.linkSecondary,
+.link__delete {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.button {
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  border: none;
+  outline: none;
+  background-color: var(--active-color);
+}
+
+/**
+******** HEADER *********
+**/
+.header {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+
+.header__brand,
+.header__link {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  border-color: var(--white);
+  composes: link from "../brand.css";
+}
+
+.header__link {
+  margin-left: 20px;
+  border-bottom: 1px solid var(--white);
+}
+
+.header__brand {
+  font-size: 22px;
+  margin: 0;
+  border: none;
+}
+
+.header__container {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/**
+******** FOOTER *********
+**/
+.footer__container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/**
+******** LIST *********
+**/
+.list {
+  border: 1px solid var(--border-color);
+  border-top: none;
+  background-color: var(--gray-color);
+}
+
+.list__item {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+  border-top: 1px solid var(--border-color);
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.list__item__title {
+  font-size: 20px;
+  flex-grow: 2;
+}
+
+/**
+******** FORM *********
+**/
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-size: 0.875em;
+  font-weight: normal;
+  line-height: 1.5;
+  display: block;
+  margin: 0 0 1rem 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--active-color);
+}
+
+.form__labelInline {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.form__input {
+  font-family: inherit;
+  font-size: 1em;
+  display: block;
+  width: 100%;
+  height: 2.65em;
+  margin: 0;
+  padding: 0.5em;
+  transition: all 0.45s ease-in-out;
+  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none !important;
+}
+
+.form__input:focus {
+  border-color: var(--border-color);
+  outline: none;
+  background: var(--gray-color);
+  box-shadow: 0 0 5px var(--border-color);
+}
+
+.form__input__radio {
+  height: auto;
+  margin-right: 0.5rem;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.flash {
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.link__delete {
+  float: right;
+}
+
+/**
+******** DECISION *********
+**/
+.pick {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10vh 0;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--gray-color);
+}
