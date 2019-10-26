@@ -3,6 +3,7 @@ const express = require('express');
 // add the logger
 const error = require('debug')('web:error');
 // middleware for sessions
+const bodyParser = require('body-parser');
 
 const expressSession = require('express-session');
 // store for saving sessions
@@ -17,7 +18,6 @@ const API = require('./utils/API');
 
 const loginRoute = require('./routes/auth');
 const profileRoute = require('./routes/profile');
-
 
 const app = express();
 // session middleware

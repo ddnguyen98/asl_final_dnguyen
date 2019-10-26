@@ -3,7 +3,8 @@
       "DEBUG": "web:*",
       "SECRET": "213213213qdadsd23131123zxzcxxz23",
       "CLIENT_ID": "5ca10c06d6f99daa9ab5",
-      "CALLBACK_URL": "http://localhost:3000/github/callback"
+      "CALLBACK_URL": "http://localhost:3000/github/callback",
+      "CLIENT_SECRET": "7f53e50361d576f12ad819a92124bb8c15e4d358"      
     },
     "ignore": "sessions"
 }
